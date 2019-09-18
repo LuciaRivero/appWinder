@@ -7,13 +7,14 @@ import LoginContainer from './src/Screens/Login/container';
 import NavigationService from './src/Services/NavigationService';
 import Login from './src/Screens/Login/main';
 import Home from './src/Screens/Home/main';
+import AuthLoadingScreen from './src/Screens/AuthLoadingScreen';
 
-const RootStack = createStackNavigator({
-  Login:Login,
+const RootStack = createSwitchNavigator({
+  AuthLoading: AuthLoadingScreen,
   AppStack: AppStack,
   AuthStack: AuthStack,
 }, {
-  initialRouteName: 'Login'
+  initialRouteName: 'AuthLoading'
 });
 
 const AppStack = createStackNavigator({
@@ -49,16 +50,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider>
-        <RootStack ref={navigatorRef => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
-        onNavigationStateChange={(prevState, currentState) => {
-          const currentScreen = this.getActiveRouteName(currentState);
-          const prevScreen = this.getActiveRouteName(prevState);
-
-          if (prevScreen !== currentScreen) {
-          }
-        }}
+        <RootStack
         />
       </Provider>
     );
