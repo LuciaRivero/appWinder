@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
-import Icon from '@expo/vector-icons/Ionicons';
 
 import {
   createSwitchNavigator,
@@ -8,12 +7,11 @@ import {
 } from 'react-navigation';
 
 import {createDrawerNavigator} from 'react-navigation-drawer';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
-import BottomTabs from './src/Screens/BottomTabs';
 import Login from './src/Screens/Login/main';
 import Home from './src/Screens/Home/main';
 import Registro from './src/Screens/Registro/main';
+
 
 class App extends Component {
   render() {
