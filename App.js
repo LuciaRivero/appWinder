@@ -13,6 +13,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 import BottomTabs from './src/Screens/BottomTabs';
 import Login from './src/Screens/Login/main';
 import Home from './src/Screens/Home/main';
+import Registro from './src/Screens/Registro/main';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ export default App;
 
 const DashboardStackNavigator = createStackNavigator(
   {
+    Registro:Registro,
     Login: Login,
     Home: Home
   },
@@ -37,7 +39,7 @@ const AppDrawerNavigator = createDrawerNavigator({
 });
 
 const AppSwitchNavigator = createSwitchNavigator({
-  Welcome: { screen: Login },
+  Welcome: { screen: Registro },
   Dashboard: { screen: AppDrawerNavigator }
 });
 
