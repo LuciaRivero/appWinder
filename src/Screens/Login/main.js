@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
-import { View, StatusBar, Text, ScrollView,Image,TouchableOpacity, Linking } from 'react-native';
+import { View, StyleSheet, StatusBar, Text, ScrollView,Image,TouchableOpacity, Linking, Button } from 'react-native';
 
 class Login extends Component {
 
   render(){
     return(
-      <View><Text>Estoy en Login</Text></View>
+      <View style={styles.container}>
+        <Text>Estoy en Login</Text>
+        <Button
+          title="Logueate"
+          onPress={() => this.props.navigation.navigate('Home')}
+        />
+        </View>
     )
   }
 }
 
 export default Login;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
