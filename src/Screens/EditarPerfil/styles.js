@@ -3,16 +3,16 @@ import {BINDERstyles} from '../BinderStyles';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F2F3FA',
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
   fondo:{
-    backgroundColor:'#F2F3FA'
+    backgroundColor:'#fff'
   },
   container: {
     justifyContent: "flex-start",
-    backgroundColor: '#F2F3FA',
+    backgroundColor: BINDERstyles.colors.white,
     paddingVertical: 16
   },
   card: {
