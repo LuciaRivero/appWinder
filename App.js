@@ -11,6 +11,8 @@ import {createStackNavigator} from 'react-navigation-stack';
 import Login from './src/Screens/Login/main';
 import Home from './src/Screens/Home/main';
 import Registro from './src/Screens/Registro/main';
+import Perfil from './src/Screens/Perfil/main';
+import Contactos from './src/Screens/Contactos';
 
 
 class App extends Component {
@@ -25,7 +27,10 @@ const DashboardStackNavigator = createStackNavigator(
   {
     Registro:Registro,
     Login: Login,
-    Home: Home
+    Home: Home,
+    Perfil:Perfil,
+    Contactos: Contactos
+
   },
 
 );
@@ -42,11 +47,3 @@ const AppSwitchNavigator = createSwitchNavigator({
 });
 
 const AppContainer = createAppContainer(AppSwitchNavigator);
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center'
-  }
-});

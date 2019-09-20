@@ -1,33 +1,16 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, StatusBar, Text, ScrollView,Image,TouchableOpacity, Linking,FeatherIcon } from 'react-native';
+import { View, StyleSheet, StatusBar, Text, ScrollView,Image,TouchableOpacity, Linking,Button } from 'react-native';
 import styles from './styles';
 import {BINDERstyles} from '../BinderStyles';
 import defaultPerfil from '../../../assets/default_perfil.png';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { RNChipView } from 'react-native-chip-view';
 
-class LogoTitleLeft extends React.Component {
-  render() {
-    return (
-      <MaterialCommunityIcons onPress={() => this.props.navigation.navigate('Perfil')} style={{textAlignVertical:'center', paddingLeft: 25, paddingRight:25}} name="account-circle-outline" size={30} color={BINDERstyles.colors.dark_grey}/>
-    );
-  }
-}
-
-class LogoTitleRight extends React.Component {
-  render() {
-    return (
-      <MaterialCommunityIcons onPress={() => this.props.navigation.navigate('Contactos')} style={{textAlignVertical:'center', paddingLeft: 25, paddingRight:25}} name="forum" size={30} color={BINDERstyles.colors.dark_grey}/>
-    );
-  }
-}
-
-class Home extends Component {
+class Perfil extends Component {
   static navigationOptions = ({ navigation }) => {
-    const Title = 'Binder'
+    const Title = 'Perfil'
     return {
       headerTitle: Title,
-      headerRight: <LogoTitleRight navigation={navigation}/>,
-      headerLeft: <LogoTitleLeft navigation={navigation}/>,
       headerStyle: {
         backgroundColor: '#E4E720',
       },
@@ -38,9 +21,7 @@ class Home extends Component {
       },
     };
   }
-
   render(){
-    
     return(
       <ScrollView style={styles.fondo}>
         <View  style={styles.container}>
@@ -55,12 +36,42 @@ class Home extends Component {
               <MaterialCommunityIcons style={{textAlignVertical:'center'}} name="coffee" size={24} color={BINDERstyles.colors.dark_grey}/> 
               <MaterialCommunityIcons style={{textAlignVertical:'center'}} name="muffin" size={24} color={BINDERstyles.colors.dark_grey}/> 
               <MaterialCommunityIcons style={{textAlignVertical:'center'}} name="bowl" size={24} color={BINDERstyles.colors.dark_grey}/> 
+              <Text style={styles.textDescription}></Text>
+              <Text>Experiencia</Text>
+              <Text style={styles.textDescription}>
+                  <Text>Cargo </Text>
+                  <Text>Empresa </Text>
+                  <Text>Mes Año - Mes Año</Text>
+              </Text>
+              <Text>Intereses</Text>
+              <View>
+                <RNChipView
+                  title={'Tecnologia'}
+                  backgroundColor={'#E4E720'}
+                  avatar={false}
+                  titleAllowFontScaling={true}
+                />
+                <RNChipView
+                  title={'Ux'}
+                  backgroundColor={'#E4E720'}
+                  avatar={false}
+                />
+                <RNChipView
+                  title={'Educacion'}
+                  backgroundColor={'#E4E720'}
+                  avatar={false}
+                />
+              </View>
             </View>     
           </TouchableOpacity>
+          <Button
+            color={BINDERstyles.colors.yellow}
+            title="Editar Perfil"
+            /*onPress={() => this.props.navigation.navigate('Home')}*//>
         </View>
       </ScrollView>
     )
   }
 }
 
-export default Home;
+export default Perfil;
