@@ -12,7 +12,8 @@ import Login from './src/Screens/Login/main';
 import Home from './src/Screens/Home/main';
 import Registro from './src/Screens/Registro/main';
 import Perfil from './src/Screens/Perfil/main';
-import Contactos from './src/Screens/Contactos';
+import Contactos from './src/Screens/Contactos/main';
+import EditarPerfil from './src/Screens/EditarPerfil/main';
 
 
 class App extends Component {
@@ -22,6 +23,9 @@ class App extends Component {
 }
 export default App;
 
+const Logout = () => {
+  alert('cerrando session')
+}
 
 const DashboardStackNavigator = createStackNavigator(
   {
@@ -29,7 +33,8 @@ const DashboardStackNavigator = createStackNavigator(
     Login: Login,
     Home: Home,
     Perfil:Perfil,
-    Contactos: Contactos
+    Contactos: Contactos,
+    EditarPerfil:EditarPerfil
 
   },
 
@@ -38,7 +43,8 @@ const DashboardStackNavigator = createStackNavigator(
 const AppDrawerNavigator = createDrawerNavigator({
   Dashboard: {
     screen: DashboardStackNavigator
-  }
+  },
+  Logout
 });
 
 const AppSwitchNavigator = createSwitchNavigator({

@@ -4,7 +4,6 @@ import styles from './styles';
 import {BINDERstyles} from '../BinderStyles';
 import defaultPerfil from '../../../assets/default_perfil.png';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import { RNChipView } from 'react-native-chip-view';
 
 class Perfil extends Component {
   static navigationOptions = ({ navigation }) => {
@@ -44,30 +43,13 @@ class Perfil extends Component {
                   <Text>Mes Año - Mes Año</Text>
               </Text>
               <Text>Intereses</Text>
-              <View>
-                <RNChipView
-                  title={'Tecnologia'}
-                  backgroundColor={'#E4E720'}
-                  avatar={false}
-                  titleAllowFontScaling={true}
-                />
-                <RNChipView
-                  title={'Ux'}
-                  backgroundColor={'#E4E720'}
-                  avatar={false}
-                />
-                <RNChipView
-                  title={'Educacion'}
-                  backgroundColor={'#E4E720'}
-                  avatar={false}
-                />
-              </View>
+
             </View>     
           </TouchableOpacity>
           <Button
             color={BINDERstyles.colors.yellow}
             title="Editar Perfil"
-            /*onPress={() => this.props.navigation.navigate('Home')}*//>
+            onPress={() => this.props.navigation.navigate('EditarPerfil')}/>
         </View>
       </ScrollView>
     )
