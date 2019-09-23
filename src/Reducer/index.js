@@ -3,10 +3,9 @@ import loginReducer from '../Services/Login/reducer';
 import homeReducer from '../Services/Home/reducer';
 import contactosReducer from '../Services/Contactos/reducer';
 
-const rootReducer = combineReducers({
+
+export default combineReducers({
   login: loginReducer,
   home:homeReducer,
   contactos:contactosReducer
 });
-
-export default rootReducer;
