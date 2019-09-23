@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Button } from 'react-native';
-
+import rootReducer from './src/Reducer/RootReducer';
+import { Provider} from 'react-redux';
+import {createStore, applyMiddleware } from 'redux';
 import {
   createSwitchNavigator,
   createAppContainer,
@@ -14,11 +16,13 @@ import Registro from './src/Screens/Registro/main';
 import Perfil from './src/Screens/Perfil/main';
 import Contactos from './src/Screens/Contactos/main';
 import EditarPerfil from './src/Screens/EditarPerfil/main';
-
+import thunk from 'redux-thunk';
 
 class App extends Component {
   render() {
-    return <AppContainer />;
+    return <Provider store={store}> 
+              <AppContainer/>
+            </Provider>;
   }
 }
 export default App;
@@ -51,3 +55,8 @@ const AppSwitchNavigator = createSwitchNavigator({
 });
 
 const AppContainer = createAppContainer(AppSwitchNavigator);
+
+const store = createStore(
+  rootReducer,
+  applyMiddleware(thunk)
+);

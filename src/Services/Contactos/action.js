@@ -5,7 +5,7 @@ export const getMatchs = () => {
   return async  (dispatch, getState) => {
 
       const url = 'http://localhost:3000/matches';
-      axiosInstance()
+      axiosInstance(getState)
       .get( url )
       .then(({ data }) => {
         console.log('DATA', data)

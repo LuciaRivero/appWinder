@@ -4,8 +4,8 @@ const initialState = {
   matchs: [],
 };
 
-const contactosReducer = ( state = initialState, {payload}) => {
-  switch (action.type) {
+const contactosReducer = ( state = initialState, {payload, type}) => {
+  switch (type) {
     case SET_USER_GET_MATCHS:
       return {
         ...state,

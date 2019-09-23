@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const axiosInstance = () => {
+const axiosInstance = (getState) => {
 
     return axios.create({
         headers: {
-          'Authorization': '',
-          'Content-Type': '',
+          'Authorization': 'none',
+          'Content-Type': 'application/json',
         }
       });
 }
