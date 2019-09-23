@@ -13,7 +13,7 @@ class LogoTitleRight extends React.Component {
   }
 }
 
-class Home extends Component {
+class Contactos extends Component {
   static navigationOptions = ({ navigation }) => {
     const Title = 'Mi network'
     return {
@@ -30,17 +30,23 @@ class Home extends Component {
     };
   }
 
+ /* componentDidMount () {
+    const {getMatchs} = this.props;
+    getMatchs()
+  }*/
+
   render(){
-    
+    console.log(this.props);
     return(
       <ScrollView style={styles.fondo}>
         <View  style={styles.container}>
-            <Text>Matches</Text>
-            <Text>Conversaciones</Text>
+          <Text style={styles.textTitle}>Matches</Text>
+          {this.returnMatches}
+          <Text style={styles.textTitle}>Conversaciones</Text>
         </View>
       </ScrollView>
     )
   }
 }
 
-export default Home;
+export default Contactos;

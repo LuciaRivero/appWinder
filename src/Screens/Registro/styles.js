@@ -21,5 +21,9 @@ export default StyleSheet.create({
   },
   textUnderLogin: {
     textAlign:'center'
+  },
+  logo:{
+    width:150,
+    height:150
   }
 });

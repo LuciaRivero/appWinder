@@ -44,5 +44,9 @@ export default StyleSheet.create({
     borderBottomColor:BINDERstyles.colors.light_grey,
     borderBottomWidth:1,
     width:'90%'
+  },
+  textTitle :{
+    color:BINDERstyles.colors.warm_grey,
+    fontWeight:'bold'
   }
 });

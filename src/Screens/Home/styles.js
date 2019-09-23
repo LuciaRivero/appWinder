@@ -44,5 +44,16 @@ export default StyleSheet.create({
     borderBottomColor:BINDERstyles.colors.light_grey,
     borderBottomWidth:1,
     width:'90%'
+  },
+  iconPreferencias:{
+    width: 45,
+    height:45
+  },
+  boxIconPreferencias:{
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    paddingLeft: 15,
+    display: 'flex'
   }
 });

@@ -1,13 +1,13 @@
 import { connect } from 'react-redux';
 import Contactos from './main';
-import {postLogin} from '../../Services/Login/action';
+import {getMatchs} from '../../Services/Contactos/action';
 
 const mapStateToProps = state => ({
-  loginSuccess:  state
+  matchs: state
 });
 
 const mapDispatchToProps = {
- postLogin
+  getMatchs
 }
 
 export default connect( mapStateToProps, mapDispatchToProps)(Contactos);

@@ -23,9 +23,7 @@ class App extends Component {
 }
 export default App;
 
-const Logout = () => {
-  alert('cerrando session')
-}
+const Logout = ({ navigation }) => navigation.navigate('Login');
 
 const DashboardStackNavigator = createStackNavigator(
   {

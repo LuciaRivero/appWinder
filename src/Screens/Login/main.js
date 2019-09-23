@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, StyleSheet, StatusBar, Text, ScrollView,Image,TouchableOpacity, Linking, Button, TextInput} from 'react-native';
 import styles from './styles';
 import {BINDERstyles} from '../BinderStyles';
+import BinderLogo from '../../../assets/binder-logo.png'
 
 class Registrer extends Component {
   state = {
@@ -45,6 +46,7 @@ class Registrer extends Component {
     return(
       <ScrollView>
         <View style={styles.container}>
+          <Image source={BinderLogo} style={styles.logo}/>
           <Text>¡Hola otra vez!</Text>
           {this.renderFormRegistro()}
           <Button
