@@ -30,13 +30,13 @@ class Contactos extends Component {
     };
   }
 
- /* componentDidMount () {
+  componentDidMount () {
     const {getMatchs} = this.props;
     getMatchs()
-  }*/
+  }
 
   render(){
-   console.log(this.props);
+   console.log(this.props.matchs);
     return(
       <ScrollView style={styles.fondo}>
         <View  style={styles.container}>

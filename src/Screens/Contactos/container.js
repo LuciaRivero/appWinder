@@ -3,7 +3,7 @@ import Contactos from './main';
 import {getMatchs} from '../../Services/Contactos/action';
 
 const mapStateToProps = state => ({
-  matchs: state
+  matchs: state.matchs
 });
 
 const mapDispatchToProps = {

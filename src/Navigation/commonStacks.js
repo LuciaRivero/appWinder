@@ -1,14 +1,21 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import HomeContainer from '../Screens/Home/container';
-import LoginContainer from '../Screens/Login/container'
-import RegistroContainer from '../Screens/Registro/container';
+import Home from '../Screens/Home/container';
+import Login from '../Screens/Login/container'
+import Registro from '../Screens/Registro/container';
+import Perfil from '../Screens/Perfil/container';
+import Contactos from '../Screens/Contactos/container';
+import EditarPerfil from '../Screens/EditarPerfil/container';
 
 const commonStack = createStackNavigator({
-  home: HomeContainer,
-  login:LoginContainer,
-  registro:RegistroContainer
+  Registro:Registro,
+  Login: Login,
+  Home: Home,
+  Perfil:Perfil,
+  Contactos: Contactos,
+  EditarPerfil:EditarPerfil
+
 }, {
-  initialRouteName: 'home',
+  initialRouteName: 'Registro',
 });
 
 export default commonStack;

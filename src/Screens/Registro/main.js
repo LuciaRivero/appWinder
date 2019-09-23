@@ -4,7 +4,7 @@ import styles from './styles';
 import {BINDERstyles} from '../BinderStyles';
 import BinderLogo from '../../../assets/binder-logo.png';
 
-class Registrer extends Component {
+class Registro extends Component {
   state = {
     nombre:'',
     email:'',
@@ -74,4 +74,4 @@ class Registrer extends Component {
   }
 }
 
-export default Registrer;
+export default Registro;
