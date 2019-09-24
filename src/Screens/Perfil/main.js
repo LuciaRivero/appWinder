@@ -25,9 +25,9 @@ class Perfil extends Component {
       <ScrollView style={styles.fondo}>
         <View  style={styles.container}>
           <TouchableOpacity style={[styles.card]}>
-            <View >
+            <View>
               <Image source={defaultPerfil} style={styles.imagePefil}/>
-              <Text>Nombre</Text>
+              <Text style={styles.textCargo}>Nombre</Text>
               <Text>Cargo - puesto</Text>
               <Text style={styles.textDescription}>descripcion</Text>
 
@@ -38,12 +38,11 @@ class Perfil extends Component {
               <Text style={styles.textDescription}></Text>
               <Text>Experiencia</Text>
               <Text style={styles.textDescription}>
-                  <Text>Cargo </Text>
+                  <Text style={styles.textCargo}>Cargo </Text>
                   <Text>Empresa </Text>
                   <Text>Mes Año - Mes Año</Text>
               </Text>
               <Text>Intereses</Text>
-
             </View>     
           </TouchableOpacity>
           <Button

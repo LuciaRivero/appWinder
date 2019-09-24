@@ -15,7 +15,7 @@ class Registro extends Component {
 
   renderFormLogin = () => {
     return(
-      <View style={{ flex: 1, marginTop: 24 }}>
+      <View style={{ flex: 1, marginTop: 24, marginBottom:24 }}>
         <TextInput
           style={[styles.textInputText]}
           onFocus={this.focoEnUsuario}
@@ -57,14 +57,14 @@ class Registro extends Component {
       <ScrollView>
         <View style={styles.container}>
         <Image source={BinderLogo} style={styles.logo}/>
-          <Text>Bienvenido a Binder</Text>
+          <Text style={styles.textBienvenida}>Bienvenido a Binder</Text>
           {this.renderFormLogin()}
           <Button
             color={BINDERstyles.colors.yellow}
             title="REGISTRARSE"
             onPress={() => this.props.navigation.navigate('Home')}/>
           <Text style={[styles.textUnderLogin]}>
-            <Text> Ya tenés una cuenta </Text>
+            <Text> ¿Ya tenés una cuenta? </Text>
             <Text onPress={() => this.props.navigation.navigate('Login')} style={[styles.textLogin]}>Login</Text>
           </Text>
         </View>

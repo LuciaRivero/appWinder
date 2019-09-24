@@ -20,10 +20,17 @@ export default StyleSheet.create({
     color: BINDERstyles.colors.aquamarine
   },
   textUnderLogin: {
-    textAlign:'center'
+    textAlign:'center',
+    margin:15,
+    color:BINDERstyles.colors.dark_grey
   },
   logo:{
-    width:150,
-    height:150
+    width:200,
+    height:200
+  },
+  textBienvenida:{
+    fontWeight:'bold',
+    fontSize:18,
+    color:BINDERstyles.colors.dark_grey
   }
 });

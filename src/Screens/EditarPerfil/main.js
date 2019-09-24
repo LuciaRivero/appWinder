@@ -72,6 +72,11 @@ class EditarPerfil extends Component {
           <TouchableOpacity style={[styles.card]}>
             <View >
               <Text> Experiencia </Text>
+              <Text style={styles.textDescription}>
+                  <Text>Cargo </Text>
+                  <Text>Empresa </Text>
+                  <Text>Mes Año - Mes Año</Text>
+              </Text>
             </View>     
           </TouchableOpacity>
         </View>

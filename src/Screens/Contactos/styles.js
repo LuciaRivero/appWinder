@@ -55,7 +55,7 @@ export default StyleSheet.create({
     width:50,
     height:50,
     marginLeft:15,
-    borderRadius:50,
+    borderRadius:50
   },
   textName:{
     marginLeft:15,
@@ -63,6 +63,5 @@ export default StyleSheet.create({
   boxMatch:{
     flex: 1,
     flexDirection: 'row',
-    flexWrap:'wrap'
   }
 });
