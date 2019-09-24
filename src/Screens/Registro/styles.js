@@ -30,7 +30,12 @@ export default StyleSheet.create({
   },
   textBienvenida:{
     fontWeight:'bold',
-    fontSize:18,
+    fontSize:22,
     color:BINDERstyles.colors.dark_grey
+  },
+  colorPassword:{
+    color:BINDERstyles.colors.warm_grey,
+    fontWeight:'bold',
+    fontSize:14
   }
 });

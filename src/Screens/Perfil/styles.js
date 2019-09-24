@@ -56,5 +56,9 @@ export default StyleSheet.create({
     color:BINDERstyles.colors.dark_grey,
     fontSize:15,
     margin:5
-  }
+  },
+  iconPreferencias:{
+    width: 45,
+    height:45
+  },
 });

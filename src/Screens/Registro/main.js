@@ -49,6 +49,7 @@ class Registro extends Component {
           value={this.state.password}
           secureTextEntry= {this.state.hidePass}
         />
+        <Text style={styles.colorPassword}>Olvidé la password</Text>
       </View>
     )
   }

@@ -4,6 +4,9 @@ import styles from './styles';
 import {BINDERstyles} from '../BinderStyles';
 import defaultPerfil from '../../../assets/default_perfil.png';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Coffee from '../../../assets/coffee-cup.png';
+import Dinner from '../../../assets/dinner.png';
+import Cupcake from '../../../assets/cupcake.png'
 import { Chip } from 'react-native-paper';
 
 class Perfil extends Component {
@@ -33,9 +36,9 @@ class Perfil extends Component {
               <Text style={styles.textDescription}>Lorem ipsum dolor sit amet consectetur, adipiscing elit pellentesque conubia posuere faucibus, vel a accumsan parturient. Neque proin gravida dictumst curae quisque velit eget, mattis vestibulum augue convallis id blandit felis, lectus dapibus rutrum vel sociis leo. Condimentum justo commodo primis blandit dui gravida nisl ad volutpat class suscipit sociosqu lobortis facilisis cum, mollis suspendisse potenti nec turpis vel venenatis metus pretium per augue tellus parturient.</Text>
 
               <Text style={styles.textIntreses}>Preferencias de networking</Text>
-              <MaterialCommunityIcons style={{textAlignVertical:'center'}} name="coffee" size={24} color={BINDERstyles.colors.dark_grey}/> 
-              <MaterialCommunityIcons style={{textAlignVertical:'center'}} name="muffin" size={24} color={BINDERstyles.colors.dark_grey}/> 
-              <MaterialCommunityIcons style={{textAlignVertical:'center'}} name="bowl" size={24} color={BINDERstyles.colors.dark_grey}/> 
+              <Image source={Coffee} style={styles.iconPreferencias} color={BINDERstyles.colors.dark_grey}/> 
+              <Image source={Dinner}  style={styles.iconPreferencias} color={BINDERstyles.colors.dark_grey}/> 
+              <Image source={Cupcake}  style={styles.iconPreferencias} color={BINDERstyles.colors.dark_grey}/> 
               <Text style={styles.textDescription}></Text>
               <Text style={styles.textIntreses}>Experiencia</Text>
               <Text style={styles.textDescription}>

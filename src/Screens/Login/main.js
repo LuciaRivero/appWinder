@@ -13,7 +13,7 @@ class Registrer extends Component {
   }
 
 
-  renderFormRegistro = () => {
+  renderFormLogin = () => {
     return(
       <View style={{ flex: 1, marginTop: 24 }}>
         <TextInput
@@ -47,8 +47,8 @@ class Registrer extends Component {
       <ScrollView>
         <View style={styles.container}>
           <Image source={BinderLogo} style={styles.logo}/>
-          <Text>¡Hola otra vez!</Text>
-          {this.renderFormRegistro()}
+          <Text style={styles.textBienvenida}>¡Hola otra vez!</Text>
+          {this.renderFormLogin()}
           <Button
             color={BINDERstyles.colors.yellow}
             title="LOGIN"

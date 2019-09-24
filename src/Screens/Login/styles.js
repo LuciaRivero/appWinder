@@ -23,7 +23,17 @@ export default StyleSheet.create({
     textAlign:'center'
   },
   logo:{
-    width:150,
-    height:150
-  }
+    width:200,
+    height:200
+  },
+  textBienvenida:{
+    fontWeight:'bold',
+    fontSize:22,
+    color:BINDERstyles.colors.dark_grey
+  },
+  textUnderLogin: {
+    textAlign:'center',
+    margin:15,
+    color:BINDERstyles.colors.dark_grey
+  },
 });
