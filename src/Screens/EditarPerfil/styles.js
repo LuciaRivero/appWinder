@@ -37,12 +37,16 @@ export default StyleSheet.create({
   },
   imagePefil:{
     width: 200,
-    height:100,
-    
+    height:200,
+    borderRadius:300,
   },
   textDescription: {
     borderBottomColor:BINDERstyles.colors.light_grey,
     borderBottomWidth:1,
     width:'90%'
-  }
+  },
+  iconPreferencias:{
+    width: 45,
+    height:45
+  },
 });

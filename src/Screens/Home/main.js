@@ -32,7 +32,7 @@ class Home extends Component {
       headerRight: <LogoTitleRight navigation={navigation}/>,
       headerLeft: <LogoTitleLeft navigation={navigation}/>,
       headerStyle: {
-        backgroundColor: '#E4E720',
+        backgroundColor: '#15BDBF',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {

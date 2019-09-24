@@ -4,7 +4,9 @@ import styles from './styles';
 import {BINDERstyles} from '../BinderStyles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import defaultPerfil from '../../../assets/default_perfil.png';
-
+import Coffee from '../../../assets/coffee-cup.png';
+import Dinner from '../../../assets/dinner.png';
+import Cupcake from '../../../assets/cupcake.png'
 
 class LogoTitleRight extends React.Component {
   render() {
@@ -21,7 +23,7 @@ class EditarPerfil extends Component {
       headerTitle: Title,
       headerRight: <LogoTitleRight navigation={navigation}/>,
       headerStyle: {
-        backgroundColor: '#E4E720',
+        backgroundColor: '#15BDBF',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -62,6 +64,9 @@ class EditarPerfil extends Component {
               <Text> Preferencias de networking
                 <MaterialCommunityIcons style={{textAlignVertical:'center'}} name="pencil-outline" size={24} color={BINDERstyles.colors.dark_grey}/>
               </Text>
+                <Image source={Coffee} style={styles.iconPreferencias} color={BINDERstyles.colors.dark_grey}/> 
+                <Image source={Dinner}  style={styles.iconPreferencias} color={BINDERstyles.colors.dark_grey}/> 
+                <Image source={Cupcake}  style={styles.iconPreferencias} color={BINDERstyles.colors.dark_grey}/>
             </View>     
           </TouchableOpacity>
           <TouchableOpacity style={[styles.card]}>

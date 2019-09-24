@@ -3,8 +3,8 @@ import { View, StyleSheet, StatusBar, Text, ScrollView,Image,TouchableOpacity, L
 import styles from './styles';
 import {BINDERstyles} from '../BinderStyles';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-
-
+import img1 from '../../../assets/img/cat.jpg'
+import img2 from '../../../assets/img/dog.jpg'
 class LogoTitleRight extends React.Component {
   render() {
     return (
@@ -13,6 +13,17 @@ class LogoTitleRight extends React.Component {
   }
 }
 
+const MATCHES = [
+  { "id": 1, "name": "Lucia Rivero", "image": img1 ,},
+  { "id": 2, "name": "Carlos Perez", "image": img2},
+  
+]
+
+const CONVERSACIONES = [
+  {"id":1, "name": "Lucia Rivero", "message": "este es un mensaje de prueba", "image": img1},
+  {"id":2, "name": "Juan Perez", "message": "este es un mensaje de prueba", "image": img2}
+]
+
 class Contactos extends Component {
   static navigationOptions = ({ navigation }) => {
     const Title = 'Mi network'
@@ -20,7 +31,7 @@ class Contactos extends Component {
       headerTitle: Title,
       headerRight: <LogoTitleRight navigation={navigation}/>,
       headerStyle: {
-        backgroundColor: '#E4E720',
+        backgroundColor: '#15BDBF',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
@@ -35,14 +46,43 @@ class Contactos extends Component {
     getMatchs()
   }
 
+  returnMatches = () => {
+    return( 
+      MATCHES.map( match => {
+        let img = match.image;
+        return(
+          <View key={match.id} style={styles.boxMatch}>
+            <Image style={styles.imgSize} source={match.image}/>
+          </View>
+        )  
+      })
+      
+    )
+  }
+
+  returnConversaciones = () => {
+    return(
+      CONVERSACIONES.map( conversacion => {
+        return (
+          <View key={conversacion.id}>
+            <Text style={styles.textName}>{conversacion.name}</Text>
+            <Image style={styles.imgSize} source={conversacion.image}/>
+            <Text>{conversacion.message}</Text>
+          </View>
+          )
+      } 
+      )
+    )
+  }
+
   render(){
-   console.log(this.props.matchs);
     return(
       <ScrollView style={styles.fondo}>
         <View  style={styles.container}>
           <Text style={styles.textTitle}>Matches</Text>
-          {this.returnMatches}
+          {this.returnMatches()}
           <Text style={styles.textTitle}>Conversaciones</Text>
+          {this.returnConversaciones()}
         </View>
       </ScrollView>
     )

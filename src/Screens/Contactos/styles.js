@@ -47,6 +47,22 @@ export default StyleSheet.create({
   },
   textTitle :{
     color:BINDERstyles.colors.warm_grey,
-    fontWeight:'bold'
+    fontWeight:'bold',
+    marginLeft:15,
+    fontSize:18
+  },
+  imgSize:{
+    width:50,
+    height:50,
+    marginLeft:15,
+    borderRadius:50,
+  },
+  textName:{
+    marginLeft:15,
+  },
+  boxMatch:{
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap:'wrap'
   }
 });

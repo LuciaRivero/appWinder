@@ -15,7 +15,7 @@ export class BINDERstyles extends Object {
     dark_aquamarine: '#007a6e',
     light_aquamarine: "#009688",
     light_purple: "#3f51b5",
-    yellow:'#E4E720',
+    yellow:'#15BDBF',
     aquamarine:'#15BDBF'
   };
 }

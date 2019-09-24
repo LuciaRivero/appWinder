@@ -13,7 +13,7 @@ export const getMatchs = () => {
       })
       .catch(error => {
         console.log(error.message, 'Get Matches');
-      });   
+      });
   }
 }
 

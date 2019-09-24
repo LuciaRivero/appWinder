@@ -11,7 +11,7 @@ class Perfil extends Component {
     return {
       headerTitle: Title,
       headerStyle: {
-        backgroundColor: '#E4E720',
+        backgroundColor: '#15BDBF',
       },
       headerTintColor: '#fff',
       headerTitleStyle: {
