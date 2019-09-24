@@ -43,9 +43,18 @@ export default StyleSheet.create({
   textDescription: {
     borderBottomColor:BINDERstyles.colors.light_grey,
     borderBottomWidth:1,
-    width:'90%'
+    width:'90%',
+    padding:5
   },
   textCargo:{
     fontWeight: "bold"
+  },
+  sizeChip:{
+    width:80,
+  },
+  textIntreses:{
+    color:BINDERstyles.colors.dark_grey,
+    fontSize:15,
+    margin:5
   }
 });
